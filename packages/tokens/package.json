@@ -1,0 +1,25 @@
+{
+  "name": "@modo/tokens",
+  "version": "0.1.0",
+  "description": "Modo design tokens — foundation layer",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./css": "./dist/tokens.css",
+    "./scss": "./dist/tokens.scss",
+    "./json": "./src/tokens.json"
+  },
+  "scripts": {
+    "build": "node build-tokens.mjs",
+    "watch": "node build-tokens.mjs --watch"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.2.0"
+  }
+}

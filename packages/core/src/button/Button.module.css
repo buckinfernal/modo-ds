@@ -1,0 +1,31 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--modo-spacing-2);
+  border: 1px solid transparent;
+  border-radius: var(--modo-border-radius-md);
+  font-family: var(--modo-typography-font-family-sans);
+  font-weight: var(--modo-typography-font-weight-medium);
+  line-height: var(--modo-typography-line-height-tight);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 100ms ease, border-color 100ms ease, color 100ms ease;
+  position: relative;
+}
+.button:focus-visible { outline: 2px solid var(--modo-color-semantic-interactive-focus); outline-offset: 2px; }
+.size-sm { padding: var(--modo-spacing-1) var(--modo-spacing-3); font-size: var(--modo-typography-font-size-sm); min-height: 2rem; }
+.size-md { padding: var(--modo-spacing-2) var(--modo-spacing-4); font-size: var(--modo-typography-font-size-md); min-height: 2.5rem; }
+.size-lg { padding: var(--modo-spacing-3) var(--modo-spacing-6); font-size: var(--modo-typography-font-size-lg); min-height: 3rem; }
+.variant-primary { background-color: var(--modo-color-semantic-interactive-default); color: var(--modo-color-semantic-text-inverse); }
+.variant-primary:hover:not(:disabled) { background-color: var(--modo-color-semantic-interactive-hover); }
+.variant-secondary { background-color: transparent; border-color: var(--modo-color-semantic-interactive-default); color: var(--modo-color-semantic-interactive-default); }
+.variant-secondary:hover:not(:disabled) { background-color: var(--modo-color-brand-tertiary); }
+.variant-ghost { background-color: transparent; color: var(--modo-color-semantic-interactive-default); }
+.variant-ghost:hover:not(:disabled) { background-color: var(--modo-color-brand-tertiary); }
+.variant-destructive { background-color: var(--modo-color-feedback-error-default); color: var(--modo-color-semantic-text-inverse); }
+.button:disabled, .button[aria-disabled='true'] { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+.fullWidth { width: 100%; }
+.spinner { display: inline-block; width: 1em; height: 1em; border: 2px solid currentColor; border-top-color: transparent; border-radius: 50%; animation: spin 0.6s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.iconLeft, .iconRight { display: inline-flex; align-items: center; flex-shrink: 0; }

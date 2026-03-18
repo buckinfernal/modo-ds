@@ -1,0 +1,40 @@
+{
+  "name": "@modo/core",
+  "version": "0.1.0",
+  "description": "Modo core UI primitives",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "lint": "eslint src --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@modo/tokens": "workspace:*",
+    "@testing-library/react": "^14.3.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "jsdom": "^24.1.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.3.1",
+    "vitest": "^1.6.0"
+  }
+}

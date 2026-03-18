@@ -1,0 +1,29 @@
+{
+  "name": "@modo/docs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "chromatic": "chromatic --exit-zero-on-changes"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.6.1",
+    "@modo/core": "workspace:*",
+    "@modo/tokens": "workspace:*",
+    "@storybook/addon-a11y": "^8.2.3",
+    "@storybook/addon-designs": "^8.0.3",
+    "@storybook/addon-essentials": "^8.2.3",
+    "@storybook/addon-interactions": "^8.2.3",
+    "@storybook/react": "^8.2.3",
+    "@storybook/react-vite": "^8.2.3",
+    "@storybook/test": "^8.2.3",
+    "@types/react": "^18.3.3",
+    "@vitejs/plugin-react": "^4.3.1",
+    "chromatic": "^11.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "storybook": "^8.2.3",
+    "vite": "^5.3.1"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "modo-ds",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Modo Design Systems Studio — monorepo",
+  "scripts": {
+    "dev": "pnpm --filter @modo/docs storybook",
+    "build": "pnpm -r build",
+    "build:tokens": "pnpm --filter @modo/tokens build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  }
+}
